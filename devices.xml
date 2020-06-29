@@ -1,75 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<remote name="sony" fetch="https://github.com/sonyxperiadev/" />
-<remote name="li" fetch="https://github.com/NoobLiROM" />
-<project path="device/sony/sepolicy" name="device-sony-sepolicy" groups="device" remote="li" revision="q-mr1-legacy" />
-<project path="device/sony/common" name="android_device_sony_common" groups="device" remote="li" revision="ten" />
-
-<!--msm8956-->
-<project path="device/sony/loire-common" name="android_device_sony_loire-common" groups="device" remote="li" revision="ten" />
-<project path="device/sony/kugo" name="android_device_sony_kugo" groups="device" remote="li" revision="ten" />
-
-</manifest>
-<?xml version="1.0" encoding="UTF-8"?>
-
-<manifest>
 
   <remote name="pixel"
-
           fetch="https://github.com/PixelExperience"
-
           revision="ten"
-
           review="gerrit.pixelexperience.org" />
 
   <project path="hardware/qcom-caf/sm8150/audio" name="hardware_qcom-caf_sm8150_audio" remote="pixel" />
-
   <project path="hardware/qcom-caf/sm8150/display" name="hardware_qcom-caf_sm8150_display" remote="pixel" />
-
   <project path="hardware/qcom-caf/sm8150/media" name="hardware_qcom-caf_sm8150_media" remote="pixel" />
-
   
-
     <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" remote="pixel">
-
     <!-- add guard for AOSP hardware/qcom dir -->
-
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
-
     <!-- add guards for CAF repositories -->
-
     <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
-
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
-
     <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/pn5xx/Android.bp" />
-
     <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/pn5xx/Android.mk" />
-
     <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
-
     <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
-
     </project>
-
     
-
       <!-- Prebuilts -->
-
   <project path="prebuilts/build-tools" name="prebuilts_build-tools" remote="pixel" clone-depth="1" />
-
   <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" remote="pixel" clone-depth="1" />
-
   <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" remote="pixel" clone-depth="1" />
-
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="pixel" clone-depth="1" />
-
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="pixel" clone-depth="1" />
-
   <project path="prebuilts/r8" name="prebuilts_r8" remote="pixel" clone-depth="1" />
-
   
-
   <project path="device/oneplus/guacamoleb" name="device_oneplus_guacamoleb" remote="pixel" />
-
 </manifest>
