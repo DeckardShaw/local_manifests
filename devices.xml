@@ -19,5 +19,5 @@
   
 <!--Hals-->
   <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="li" revision="eleven" />
-  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" remote="li" revision="eleven" />
+
 </manifest>
