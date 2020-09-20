@@ -2,14 +2,6 @@
 <manifest>
 <remote name="ALK-gitlab" fetch="https://gitlab.com/ALKALiKong" />
 <remote name="li" fetch="https://github.com/NoobLiROM" />
-<remote name="lineage" fetch="https://github.com/LineageOS" />
-  <remote name="potato"
-          fetch="https://github.com/PotatoProject"
-          revision="refs/heads/croquette-release" />
-
-  <remote name="potato-next"
-          fetch="https://github.com/PotatoProject-next"
-          revision="refs/heads/d-staging1" />
 
 <!--Device Tree-->
 <project path="device/xiaomi/dipper" name="derp_device_xiaomi_dipper" groups="device" remote="li" revision="11" />
@@ -26,30 +18,6 @@
 <project path="vendor/xiaomi/dipper-firmware" name="vendor_xiaomi_dipper-firmware" groups="device" remote="ALK-gitlab" revision="master" />
   
 <!--Hals-->
-<remove-project name="hardware_qcom-caf_common" />
-  <!-- QCOM CAF -->
-  <project path="hardware/qcom-caf/common" name="yaap/hardware_qcom-caf_common" remote="github" revision="eleven" >
-    <!-- add guard for AOSP hardware/qcom dir -->
-    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
-    <!-- for AOSP sdm845, we override os_pickup.mk -->
-    <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
-    <!-- add guards for CAF repositories -->
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/apq8084/Android.mk" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8916/Android.mk" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8952/Android.mk" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8960/Android.mk" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8974/Android.mk" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8994/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
-  </project>
   <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="li" revision="eleven" />
   <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" remote="li" revision="eleven" />
 </manifest>
