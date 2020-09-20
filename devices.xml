@@ -19,5 +19,5 @@
   
 <!--Hals-->
   <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="li" revision="eleven" />
-
+    <project path="hardware/qcom-caf/wlan" name="yaap/hardware_qcom-caf_wlan" remote="github" revision="eleven" />
 </manifest>
